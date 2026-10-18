@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Misi Bahasa: Dunia Imbuhan Tahun 4</title>
+<style>
+:root{--ink:#18234a;--purple:#6545d8;--pink:#ff5ca8;--yellow:#ffd84d;--mint:#54e0c0}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:linear-gradient(135deg,#b5f4ff,#f9d6ff,#fff1a8);min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:radial-gradient(circle at 20% 20%,white 0 3px,transparent 4px),radial-gradient(circle at 80% 60%,white 0 4px,transparent 5px);background-size:70px 70px;animation:float 18s linear infinite}
+@keyframes float{to{background-position:150px -200px, -150px 180px}}@keyframes pop{50%{transform:scale(1.04)}}@keyframes glow{50%{box-shadow:0 0 28px #ffda59}}
+header,.wrap{max-width:1050px;margin:auto;padding:18px;position:relative}
+header{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.logo{font-size:1.2rem;font-weight:900}.btn{border:0;border-radius:15px;padding:11px 15px;font-weight:800;cursor:pointer;background:#fff;color:var(--ink);box-shadow:0 4px 0 #d3c9ff}.btn.primary{background:var(--purple);color:white}.btn:active{transform:translateY(3px);box-shadow:none}
+.hero,.panel{background:#ffffffdc;border:2px solid white;border-radius:26px;padding:clamp(18px,4vw,32px);box-shadow:0 14px 35px #553ca522;margin-bottom:18px}
+.hero{background:linear-gradient(120deg,#ffffffed,#f5eaffed)}h1{font-size:clamp(2rem,6vw,3.7rem);line-height:1.02;margin:10px 0;color:#4e32bd}h2{margin-top:0}.tag{display:inline-block;background:#fff0a9;padding:7px 12px;border-radius:99px;font-weight:800;margin:3px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.mini{background:#f5f2ff;border-radius:18px;padding:16px}.mini h3{margin:0 0 8px}
+input{width:100%;padding:13px;border:2px solid #d8d1ff;border-radius:12px;font:inherit;margin:5px 0 12px}
+.progress{height:13px;background:#e9e4ff;border-radius:99px;overflow:hidden;margin:12px 0}.bar{height:100%;width:0;background:linear-gradient(90deg,#ff62ae,#ffd84d,#53dfbd);transition:width .4s}
+.qhead{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-weight:900}.question{font-size:clamp(1.2rem,3.5vw,1.8rem);font-weight:850;margin:22px 0}.answers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.answer{padding:16px;text-align:left;border:2px solid #e2dcff;border-radius:16px;background:white;font:inherit;font-weight:750;cursor:pointer;min-height:65px}.answer:hover{border-color:#7c62eb;transform:translateY(-2px)}.answer:disabled{cursor:default}.answer.good{background:#d5fff0;border-color:#10ad7d}.answer.bad{background:#ffe0e9;border-color:#f05c87}
+.feedback{font-size:1.1rem;font-weight:850;min-height:35px;margin:14px 0}.hidden{display:none!important}.star{font-size:1.5rem;color:#e5a800}.note{border-left:6px solid #ffcf43;padding:12px 15px;background:#fff8d9;border-radius:10px}.video{width:100%;aspect-ratio:16/9;border:0;border-radius:16px}.footer{text-align:center;padding:20px;font-size:.9rem}.victory{text-align:center;background:linear-gradient(135deg,#ffe4f2,#fff4b5,#d7fff2);animation:glow 2s infinite}.bigscore{font-size:clamp(3rem,10vw,5rem);font-weight:1000;color:#5938c5}
+a{color:#5535c9;font-weight:750}small{line-height:1.5}.pill{background:#dffaf4;padding:6px 10px;border-radius:9px;font-weight:800}
+</style>
+</head>
+<body>
+<header><div class="logo">🚀 Misi Bahasa • Tahun 4</div><div><button class="btn" id="soundBtn" aria-pressed="false">🔊 Bunyi: ON</button> <button class="btn" onclick="window.print()">🖨️ Cetak</button></div></header>
+<main class="wrap">
+<section class="hero">
+<span class="tag">🎓 Bahasa Melayu Tahun 4</span><span class="tag">🎨 Didik Hibur</span>
+<h1>🌈 Dunia Imbuhan</h1>
+<p style="font-size:1.15rem">Sertai misi menyelamatkan perkataan! Teroka nota ringkas, tonton video, kemudian kumpulkan ⭐ melalui 20 cabaran bahasa.</p>
+<div class="grid">
+<div class="mini"><h3>👩‍🏫 Guru</h3><b>MUHAMAD SYAWALWAHED</b><br>SK (P) JALAN YAHYA AWAL</div>
+<div class="mini"><h3>📚 Tema & Unit</h3><b>Tema 4: Kebudayaan, Kesenian dan Estetika</b><br>Unit 11: Indah Seni Sepanjang Zaman</div>
+<div class="mini"><h3>🧭 Fokus</h3><b>Kata berimbuhan awalan dan akhiran</b><br>Kenal pasti dan gunakan mengikut konteks.</div>
+</div>
+<div class="grid" style="margin-top:15px">
+<div><label for="student"><b>Nama murid</b></label><input id="student" placeholder="Taip nama murid di sini"></div>
+<div><label for="classroom"><b>Kelas (pilihan)</b></label><input id="classroom" placeholder="Contoh: 4 Bestari"></div>
+</div>
+<button class="btn primary" onclick="startGame()">🎮 MULA MISI!</button>
+</section>
+
+<section class="panel">
+<h2>📖 Peta Pembelajaran</h2>
+<div class="grid">
+<div class="mini"><h3>📌 Standard Kandungan</h3><p><b>5.2</b> Memahami dan menggunakan bentuk kata mengikut konteks.</p><p><b>2.3</b> Membaca dan mengapresiasi karya sastera dan bukan sastera.</p></div>
+<div class="mini"><h3>🎯 Standard Pembelajaran</h3><p><b>5.2.1(i)</b> Memahami dan menggunakan kata berimbuhan awalan mengikut konteks.</p><p><b>5.2.1(ii)</b> Memahami dan menggunakan kata berimbuhan akhiran mengikut konteks.</p><small>Rujukan kerja: RPT BM Tahun 4 2025/2026, Tema 4 Unit 11. Sila semak pemetaan dengan DSKP/RPT sekolah yang sedang digunakan.</small></div>
+<div class="mini"><h3>✨ Objektif</h3><p>Pada akhir sesi, murid dapat:</p><ul><li>membezakan imbuhan awalan dan akhiran;</li><li>memilih perkataan berimbuhan yang sesuai dalam ayat;</li><li>menjawab sekurang-kurangnya 15 daripada 20 soalan dengan betul.</li></ul></div>
+</div>
+</section>
+
+<section class="panel">
+<h2>🧠 Nota Infografik: Kuasa Imbuhan</h2>
+<div class="grid">
+<div class="mini" style="background:#e4faff"><h3>⬅️ AWALAN</h3><p>Imbuhan yang hadir <b>di hadapan kata dasar</b>.</p><p>ajar → <b>meng</b>ajar<br>tulis → <b>pe</b>nulis<br>main → <b>ber</b>main</p><span class="pill">Formula: imbuhan + kata dasar</span></div>
+<div class="mini" style="background:#fff0f7"><h3>➡️ AKHIRAN</h3><p>Imbuhan yang hadir <b>di belakang kata dasar</b>.</p><p>makan → makan<b>an</b><br>lukis → lukis<b>an</b><br>guna → guna<b>kan</b></p><span class="pill">Formula: kata dasar + imbuhan</span></div>
+<div class="mini" style="background:#efffe8"><h3>🕵️ TIP DETEKTIF</h3><p>1. Cari kata dasar.</p><p>2. Periksa kedudukan imbuhan.</p><p>3. Baca ayat penuh untuk pastikan maksudnya tepat.</p><p>Contoh: “Aina sedang <b>menyapu</b> lantai.” Awalan <b>meny-</b> + sapu.</p></div>
+</div>
+<div class="note" style="margin-top:14px">💡 Ingat: bentuk kata boleh berubah mengikut proses pengimbuhan dan ejaan. Pilih perkataan berdasarkan konteks ayat, bukan hafalan semata-mata.</div>
+</section>
+
+<section class="panel">
+<h2>▶️ Sudut Video Pembelajaran</h2>
+<p>Pilih video YouTube berkaitan kata berimbuhan Tahun 4. Pautan carian dibuka di YouTube supaya guru boleh memilih video yang sesuai dan terkini.</p>
+<div class="grid">
+<div class="mini"><h3>🎬 Kata Berimbuhan</h3><p><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=kata+berimbuhan+Bahasa+Melayu+Tahun+4">▶ Cari video: Kata berimbuhan Tahun 4</a></p></div>
+<div class="mini"><h3>🎬 Imbuhan Awalan</h3><p><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=imbuhan+awalan+Bahasa+Melayu+sekolah+rendah">▶ Cari video: Imbuhan awalan</a></p></div>
+<div class="mini"><h3>🎬 Imbuhan Akhiran</h3><p><a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=imbuhan+akhiran+Bahasa+Melayu+sekolah+rendah">▶ Cari video: Imbuhan akhiran</a></p></div>
+</div>
+</section>
+
+<section id="game" class="panel hidden">
+<div class="qhead"><span id="player">🧑‍🚀 Angkasawan</span><span>⭐ <span id="score">0</span></span><span id="counter">Soalan 1/20</span></div>
+<div class="progress"><div class="bar" id="bar"></div></div>
+<div id="question" class="question"></div><div id="answers" class="answers"></div><div id="feedback" class="feedback" aria-live="polite"></div>
+<button id="next" class="btn primary hidden" onclick="nextQuestion()">Seterusnya ➜</button>
+</section>
+
+<section id="result" class="panel victory hidden">
+<h2>🏆 MISI SELESAI!</h2><div class="bigscore" id="finalscore">0/20</div><h2 id="rank">Hebat!</h2><p id="summary"></p><div id="stars" style="font-size:2rem"></div>
+<button class="btn primary" onclick="restart()">🔁 Main Semula</button> <button class="btn" onclick="downloadResult()">📄 Simpan keputusan (.txt)</button>
+</section>
+<section class="panel">
+<h2>🧑‍🏫 Cadangan aliran PdP (30–40 minit)</h2>
+<div class="grid"><div class="mini"><b>1. Set induksi • 5 minit</b><p>Tanya murid perkataan yang mereka lihat di rumah atau sekolah.</p></div><div class="mini"><b>2. Nota & video • 10 minit</b><p>Terangkan infografik; pilih satu video YouTube dan bincangkan contoh.</p></div><div class="mini"><b>3. Misi permainan • 15–20 minit</b><p>Murid jawab 20 soalan secara individu atau berkumpulan.</p></div><div class="mini"><b>4. Penutup • 5 minit</b><p>Murid bina satu ayat menggunakan kata berimbuhan dan refleksi pembelajaran.</p></div></div>
+</section>
+<div class="footer">Dibina untuk PdP Bahasa Melayu Tahun 4 • Mesra telefon, tablet dan komputer • Audio menggunakan fungsi suara peranti jika tersedia.</div>
+</main>
+<script>
+const qs=[
+["Perkataan manakah mempunyai imbuhan awalan?","bermain","makanan","lukisan","tulisan",0,"“Ber-” hadir di hadapan kata dasar main."],
+["Pilih perkataan berimbuhan akhiran.","membaca","pelukis","makanan","berjalan",2,"“-an” hadir di belakang kata dasar makan."],
+["Kata dasar bagi perkataan “menyapu” ialah…","sapu","nyapu","meny","menyap",0,"Kata dasarnya ialah sapu."],
+["Ayat manakah menggunakan kata berimbuhan dengan betul?","Adik bermain di taman.","Adik permainan di taman.","Adik mainan di taman.","Adik pemain di taman.",0,"“Bermain” sesuai untuk perbuatan yang dilakukan."],
+["Perkataan “penyanyi” mempunyai imbuhan di…","belakang kata dasar","hadapan kata dasar","kedua-dua hujung","tiada imbuhan",1,"PeN- ialah imbuhan awalan."],
+["Pilih kata berimbuhan akhiran daripada kata dasar “lukis”.","pelukis","melukis","lukisan","dilukis",2,"Lukis + -an menjadi lukisan."],
+["Lengkapkan ayat: Ibu membeli beberapa ____ di kedai.","membeli","pembeli","makanan","dimakan",2,"Makanan ialah kata nama yang sesuai dalam ayat."],
+["Perkataan “berlari” terbentuk daripada…","lari + -an","ber- + lari","lari + -kan","pe- + lari",1,"Awalan ber- hadir di hadapan kata dasar lari."],
+["Yang manakah bukan contoh imbuhan awalan?","terjatuh","membaca","kebersihan","makanan",3,"Makanan menggunakan akhiran -an."],
+["Pilih perkataan yang sesuai: Kakak sedang ____ gambar bunga.","lukisan","melukis","pelukis","lukiskan",1,"Melukis ialah kata kerja yang sesuai selepas “sedang”."],
+["Apakah kata dasar bagi “pembaca”?","baca","membaca","bacaan","dibaca",0,"Kata dasar bagi pembaca ialah baca."],
+["Perkataan “gunakan” mempunyai akhiran…","-kan","ber-","meN-","peN-",0,"Gunakan terbentuk daripada guna + -kan."],
+["Lengkapkan: Farid ____ kasut sebelum masuk rumah.","menanggalkan","tanggalan","penanggal","tertanggalan",0,"Menanggalkan sesuai dengan maksud melakukan perbuatan."],
+["Pilih pasangan kata dasar → kata berimbuhan yang betul.","ajar → makanan","main → bermain","sapu → lukisan","baca → berbacaan",1,"Main + ber- menjadi bermain."],
+["Dalam ayat “Lukisan itu cantik”, perkataan berimbuhan ialah…","itu","cantik","lukisan","sangat",2,"Lukisan mempunyai akhiran -an."],
+["Imbuhan awalan hadir di bahagian…","tengah kata","hadapan kata dasar","belakang kata dasar","hujung ayat",1,"Awalan berada di hadapan kata dasar."],
+["Pilih ayat yang menggunakan “-an” sebagai akhiran dengan tepat.","Murid itu makanan nasi.","Lukisan Amir dipamerkan.","Adik berlukisan ke sekolah.","Saya pelukisan buku.",1,"Lukis + -an menghasilkan kata nama lukisan."],
+["Kata dasar “ajar” boleh menjadi kata berimbuhan awalan…","ajaran","pelajaran","mengajar","ajarannya",2,"Mengajar menggunakan awalan meng-."],
+["Pilih perkataan yang mempunyai imbuhan awalan dan akhiran.","makanan","bermain","membersihkan","pelukis",2,"Membersihkan mempunyai awalan mem- dan akhiran -kan."],
+["Lengkapkan: Murid-murid menghasilkan ____ untuk pameran seni.","melukis","lukisan","berlukis","pelukisnya",1,"Lukisan ialah hasil yang dipamerkan."]
+];
+let idx=0,score=0,locked=false,started=false,sound=true,studentName="Murid";
+function say(t){if(sound&&'speechSynthesis'in window){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(t);u.lang='ms-MY';u.rate=1;let voices=speechSynthesis.getVoices();let v=voices.find(x=>x.lang.toLowerCase().startsWith('ms'));if(v)u.voice=v;speechSynthesis.speak(u)}}
+function tone(ok){if(!sound)return;try{let c=new(window.AudioContext||window.webkitAudioContext)(),o=c.createOscillator(),g=c.createGain();o.connect(g);g.connect(c.destination);o.frequency.value=ok?880:220;g.gain.value=.08;o.start();o.stop(c.currentTime+.16)}catch(e){}}
+document.getElementById('soundBtn').onclick=()=>{sound=!sound;document.getElementById('soundBtn').textContent=sound?'🔊 Bunyi: ON':'🔇 Bunyi: OFF';document.getElementById('soundBtn').setAttribute('aria-pressed',String(sound));if(!sound&&'speechSynthesis'in window)speechSynthesis.cancel()};
+function startGame(){studentName=document.getElementById('student').value.trim()||'Murid';idx=0;score=0;started=true;document.getElementById('player').textContent='🧑‍🚀 '+studentName;document.getElementById('game').classList.remove('hidden');document.getElementById('result').classList.add('hidden');document.getElementById('game').scrollIntoView({behavior:'smooth'});render()}
+function render(){locked=false;let q=qs[idx];document.getElementById('counter').textContent=`Soalan ${idx+1}/${qs.length}`;document.getElementById('score').textContent=score;document.getElementById('bar').style.width=(idx/qs.length*100)+'%';document.getElementById('question').textContent=q[0];document.getElementById('feedback').textContent='Pilih satu jawapan yang paling tepat!';document.getElementById('next').classList.add('hidden');let a=document.getElementById('answers');a.innerHTML='';for(let i=1;i<=4;i++){let b=document.createElement('button');b.className='answer';b.textContent=['🅰️ ','🅱️ ','🅲️ ','🅳️ '][i-1]+q[i];b.onclick=()=>answer(i-1,b);a.appendChild(b)}}
+function answer(choice,button){if(locked)return;locked=true;let q=qs[idx],buttons=[...document.querySelectorAll('.answer')];buttons.forEach((b,i)=>{b.disabled=true;if(i===q[5])b.classList.add('good')});if(choice===q[5]){score++;document.getElementById('score').textContent=score;document.getElementById('feedback').textContent='✅ Betul! Syabas! ⭐ '+q[6];tone(true);say('Betul! Syabas!')}else{button.classList.add('bad');document.getElementById('feedback').textContent='❌ Belum tepat. Cuba lagi! '+q[6];tone(false);say('Belum tepat. Cuba lagi!')}document.getElementById('next').classList.remove('hidden');document.getElementById('next').textContent=idx===qs.length-1?'Lihat Keputusan 🏆':'Seterusnya ➜';document.getElementById('bar').style.width=((idx+1)/qs.length*100)+'%'}
+function nextQuestion(){if(!locked)return;if(idx<qs.length-1){idx++;render();document.getElementById('question').scrollIntoView({behavior:'smooth',block:'center'})}else finish()}
+function finish(){document.getElementById('game').classList.add('hidden');document.getElementById('result').classList.remove('hidden');document.getElementById('finalscore').textContent=score+'/20';let rank=score>=18?'🌟 Juara Bahasa!':score>=15?'🚀 Hebat, Misi Berjaya!':score>=10?'💪 Teruskan Usaha!':'🌱 Terus berlatih, anda boleh!';document.getElementById('rank').textContent=rank;document.getElementById('summary').textContent=studentName+', anda menjawab '+score+' daripada 20 soalan dengan betul.';document.getElementById('stars').textContent='⭐'.repeat(Math.max(1,Math.round(score/2)))}
+function restart(){document.getElementById('result').classList.add('hidden');startGame()}
+function downloadResult(){let txt=`KEPUTUSAN MISI BAHASA MELAYU TAHUN 4\nNama: ${studentName}\nTema 4: Kebudayaan, Kesenian dan Estetika\nUnit 11: Indah Seni Sepanjang Zaman\nFokus: Kata berimbuhan awalan dan akhiran\nSkor: ${score}/20\nTarikh: ${new Date().toLocaleDateString('ms-MY')}\nGuru: MUHAMAD SYAWALWAHED\nSekolah: SK (P) JALAN YAHYA AWAL`;let blob=new Blob([txt],{type:'text/plain;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='keputusan-misi-bahasa.txt';a.click();URL.revokeObjectURL(a.href)}
+</script>
+</body></html>
